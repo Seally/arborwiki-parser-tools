@@ -11,5 +11,8 @@
     },
     "compilerOptions": {
         "noErrorTruncation": true
+    },
+    "tasks": {
+        "docs:generate": "deno doc --html --name=\"ArborWiki Parser Tools\" ./mod.ts"
     }
 }

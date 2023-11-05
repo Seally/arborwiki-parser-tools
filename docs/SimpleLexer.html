@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleLexer - ArborWiki Parser Tools documentation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="doc-current-symbol" content="SimpleLexer">
+  <link rel="stylesheet" href="./styles.css">
+  <style></style>
+</head>
+<body>
+
+
+<nav id="sidepanel">
+    <h2><a href="index.html"><span>ArborWiki Parser Tools</span></a></h2>
+    
+        <div class="section_title"><div class="symbol_kind kind_Class_text kind_Class_bg" title="Class">
+  c
+</div>
+<h3 class="kind_Class_text">Classes</h3></div>
+        <ul>
+        
+            <li>
+                <a href="SimpleLexer.html" title="SimpleLexer" class=""><span><code>SimpleLexer</code></span></a>
+            </li>
+        
+        </ul>
+    
+        <div class="section_title"><div class="symbol_kind kind_Function_text kind_Function_bg" title="Function">
+  f
+</div>
+<h3 class="kind_Function_text">Functions</h3></div>
+        <ul>
+        
+            <li>
+                <a href="escapeRegExp.html" title="escapeRegExp" class=""><span><code>escapeRegExp</code></span></a>
+            </li>
+        
+        </ul>
+    
+        <div class="section_title"><div class="symbol_kind kind_TypeAlias_text kind_TypeAlias_bg" title="Type Alias">
+  T
+</div>
+<h3 class="kind_TypeAlias_text">Type Aliases</h3></div>
+        <ul>
+        
+            <li>
+                <a href="SimpleLexerDefinitions.html" title="SimpleLexerDefinitions" class=""><span><code>SimpleLexerDefinitions</code></span></a>
+            </li>
+        
+            <li>
+                <a href="SimpleLexerToken.html" title="SimpleLexerToken" class=""><span><code>SimpleLexerToken</code></span></a>
+            </li>
+        
+            <li>
+                <a href="SimpleLexerTokenDefinition.html" title="SimpleLexerTokenDefinition" class=""><span><code>SimpleLexerTokenDefinition</code></span></a>
+            </li>
+        
+        </ul>
+    
+</nav>
+
+
+<div id="content">
+  <a href="./index.html">&#8592; Back to index</a>
+  
+<input type="text" id="searchbar" style="display: none;" />
+
+
+  <main class="symbol_group" id="symbol_SimpleLexer">
+  
+    <article class="symbol">
+      <div class="symbol_header">
+        <div class="doc_block_title">
+          <div>
+            <span class="kind_Class_text">class</span>&nbsp;<span style="font-weight: 700;">SimpleLexer</span>
+          </div>
+          <div class="doc_block_subtitle"></div>
+        </div>
+      </div>
+      <div>
+        <div class="doc_block_items"><div class="markdown"><p>A very basic lexer that simply just takes string and <code>RegExp</code> patterns and
+spits out the associated tokens with no advanced bells and whistles.</p>
+</div><div><h2 class="section_title" id="Examples"><a href="#Examples" aria-label="Anchor">Examples</a></h2><div class="section"><div class="example"><a
+      href="#example_0"
+      class="anchor"
+      aria-label="Anchor"
+      tabIndex=-1
+    >
+      <div style="width: 14px; height: 14px; display: inline-block;">&#128279;</div>
+    </a><details id=example_0><summary><div class="arrow_toggle">&#x25B6;</div><div class="markdown_summary"><p>Example 1</p>
+</div></summary><div class="markdown"><pre><code class="language-typescript">const lexer = new SimpleLexer({
+    tokens: {
+        inlineWhitespace: /[ \t]+/u,
+        lineEnding: /\r\n?|[\n\f\v\u2028\u2029]/u,
+        word: /[^ \t\r\n\f\v\u2028\u2029]+/u,
+    }
+});
+
+const tokens = lexer.tokenize(input);
+
+for (const token of tokens) {
+    // ...
+}
+</code></pre>
+</div></details></div></div></div><div><h2 class="section_title" id="Constructors"><a href="#Constructors" aria-label="Anchor">Constructors</a></h2><div class="section">
+    <div class="doc_item" id="constructor_0">
+      <a
+      href="#constructor_0"
+      class="anchor"
+      aria-label="Anchor"
+      tabIndex=-1
+    >
+      <div style="width: 14px; height: 14px; display: inline-block;">&#128279;</div>
+    </a>
+      <div class="doc_entry">
+        <span class="doc_entry_children">
+          <code>
+            <span style="font-weight: 700;">SimpleLexer</span><span style="font-weight: 500;">()</span>
+          </code>
+        </span>
+      </div>
+      
+    </div>
+   </div></div><div><h2 class="section_title" id="Type Parameters"><a href="#Type Parameters" aria-label="Anchor">Type Parameters</a></h2><div class="section">
+    <div class="doc_item" id="type_param_D">
+      <a
+      href="#type_param_D"
+      class="anchor"
+      aria-label="Anchor"
+      tabIndex=-1
+    >
+      <div style="width: 14px; height: 14px; display: inline-block;">&#128279;</div>
+    </a>
+      <div class="doc_entry">
+        <span class="doc_entry_children">
+          <code>
+            <span style="font-weight: 700;">D</span><span style="font-weight: 500;"><span><span> extends </span><a href="./SimpleLexerDefinitions.html" class="link">SimpleLexerDefinitions</a></span></span>
+          </code>
+        </span>
+      </div>
+      
+    </div>
+   </div></div><div><h2 class="section_title" id="Methods"><a href="#Methods" aria-label="Anchor">Methods</a></h2><div class="section">
+    <div class="doc_item" id="method_match_0">
+      <a
+      href="#method_match_0"
+      class="anchor"
+      aria-label="Anchor"
+      tabIndex=-1
+    >
+      <div style="width: 14px; height: 14px; display: inline-block;">&#128279;</div>
+    </a>
+      <div class="doc_entry">
+        <span class="doc_entry_children">
+          <code>
+            <span style="font-weight: 700;">match</span><span style="font-weight: 500;">(<span><span>input<span>: <span>string</span></span></span><span>, </span><span>offset<span>: <span>number</span></span></span></span>): <span><a href="./SimpleLexerToken.html" class="link">SimpleLexerToken</a>&lt;<span>_ExtractType</span>&lt;<a href="#type_param_D" class="link">D</a>[<span>"tokens"</span>]&gt;&gt;<span> | </span><span>null</span></span></span>
+          </code>
+        </span>
+      </div>
+      <div class="markdown"><p>Matches a token at the given <code>offset</code> in <code>input</code>.</p>
+</div>
+    </div>
+   
+    <div class="doc_item" id="method_tokenize_0">
+      <a
+      href="#method_tokenize_0"
+      class="anchor"
+      aria-label="Anchor"
+      tabIndex=-1
+    >
+      <div style="width: 14px; height: 14px; display: inline-block;">&#128279;</div>
+    </a>
+      <div class="doc_entry">
+        <span class="doc_entry_children">
+          <code>
+            <span style="font-weight: 700;">tokenize</span><span style="font-weight: 500;">(<span><span>input<span>: <span>string</span></span></span><span>, </span><span>offset?</span></span>)</span>
+          </code>
+        </span>
+      </div>
+      <div class="markdown"><p>Tokenizes the <code>input</code> starting at the given <code>offset</code>.</p>
+</div>
+    </div>
+   </div></div></div>
+      </div>
+    </article>
+  
+</main>
+
+  <div id="searchResults"></div>
+</div>
+
+</body>
+<script src="./search_index.js" defer></script>
+<script src="./fuse.js" defer></script>
+<script src="./search.js" defer></script>
+</html>
