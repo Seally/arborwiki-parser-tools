@@ -1,5 +1,8 @@
 {
     "fmt": {
+        "exclude": [
+            "docs/"
+        ],
         "indentWidth": 4
     },
     "lint": {
