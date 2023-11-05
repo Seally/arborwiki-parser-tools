@@ -2,7 +2,7 @@
  * Match the characters in this list:
  * https://tc39.es/ecma262/#prod-SyntaxCharacter
  */
-const REGEXP_SYNTAX_CHARACTER_PATTERN = /[\^$\\.*+?()[\]{}|]/g;
+const _REGEXP_SYNTAX_CHARACTER_PATTERN = /[\^$\\.*+?()[\]{}|]/g;
 
 /**
  * Escape the string for insertion into a `RegExp` pattern without special
@@ -16,5 +16,5 @@ const REGEXP_SYNTAX_CHARACTER_PATTERN = /[\^$\\.*+?()[\]{}|]/g;
  * _Source:_ https://tc39.es/ecma262/#prod-SyntaxCharacter
  */
 export function escapeRegExp(input: string) {
-    return input.replace(REGEXP_SYNTAX_CHARACTER_PATTERN, "\\$&");
+    return input.replace(_REGEXP_SYNTAX_CHARACTER_PATTERN, "\\$&");
 }
