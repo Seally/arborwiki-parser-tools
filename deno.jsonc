@@ -17,5 +17,8 @@
     },
     "tasks": {
         "docs:generate": "deno doc --html --name=\"ArborWiki Parser Tools\" ./mod.ts"
+    },
+    "imports": {
+        "@std/assert": "jsr:@std/assert@^1.0.2"
     }
 }
