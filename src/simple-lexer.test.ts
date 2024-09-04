@@ -32,7 +32,7 @@ Deno.test("SimpleLexer.prototype.tokenize()", () => {
             type: "openBrace",
             image: "{",
             startOffset: 0,
-            nextOffset: 1
+            nextOffset: 1,
         },
         {
             type: "whitespace",
@@ -44,19 +44,19 @@ Deno.test("SimpleLexer.prototype.tokenize()", () => {
             type: "string",
             image: '"version"',
             startOffset: 6,
-            nextOffset: 15
+            nextOffset: 15,
         },
         {
             type: "colon",
             image: ":",
             startOffset: 15,
-            nextOffset: 16
+            nextOffset: 16,
         },
         {
             type: "whitespace",
             image: " ",
             startOffset: 16,
-            nextOffset: 17
+            nextOffset: 17,
         },
         {
             type: "number",
@@ -68,13 +68,13 @@ Deno.test("SimpleLexer.prototype.tokenize()", () => {
             type: "whitespace",
             image: "\n",
             startOffset: 18,
-            nextOffset: 19
+            nextOffset: 19,
         },
         {
             type: "closeBrace",
             image: "}",
             startOffset: 19,
-            nextOffset: 20
+            nextOffset: 20,
         },
     ]);
 });
