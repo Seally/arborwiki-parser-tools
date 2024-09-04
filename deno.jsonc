@@ -1,9 +1,9 @@
 {
     "name": "@seally/simple-lexer",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "exports": "./mod.ts",
     "publish": {
-        "include": ["src/**/*.ts", "mod.ts"],
+        "include": ["src/**/*.ts", "mod.ts", "README.md"],
         "exclude": ["**/*.test.ts"]
     },
     "fmt": {
