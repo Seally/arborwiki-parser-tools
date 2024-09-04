@@ -1,4 +1,7 @@
 {
+    "name": "@seally/simple-lexer",
+    "version": "0.1.0",
+    "exports": "./mod.ts",
     "fmt": {
         "exclude": [
             "docs/"
@@ -16,7 +19,7 @@
         "noErrorTruncation": true
     },
     "tasks": {
-        "docs:generate": "deno doc --html --name=\"ArborWiki Parser Tools\" ./mod.ts"
+        "docs:generate": "deno doc --html --name=\"Simple Lexer\" ./mod.ts"
     },
     "imports": {
         "@std/assert": "jsr:@std/assert@^1.0.2"

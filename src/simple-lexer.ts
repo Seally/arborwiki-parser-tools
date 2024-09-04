@@ -202,7 +202,10 @@ export class SimpleLexer<const D extends SimpleLexerDefinitions> {
      * @param input The input string.
      * @param offset The offset to start parsing the input string. Default: `0`
      */
-    *tokenize(input: string, offset = 0) {
+    *tokenize(
+        input: string,
+        offset = 0,
+    ): Generator<SimpleLexerToken<_ExtractType<D["tokens"]>>, void> {
         while (offset < input.length) {
             const token = this.match(input, offset);
 

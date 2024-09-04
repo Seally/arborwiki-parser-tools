@@ -15,6 +15,6 @@ const _REGEXP_SYNTAX_CHARACTER_PATTERN = /[\^$\\.*+?()[\]{}|]/g;
  *
  * _Source:_ https://tc39.es/ecma262/#prod-SyntaxCharacter
  */
-export function escapeRegExp(input: string) {
+export function escapeRegExp(input: string): string {
     return input.replace(_REGEXP_SYNTAX_CHARACTER_PATTERN, "\\$&");
 }
