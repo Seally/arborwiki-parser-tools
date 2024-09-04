@@ -2,6 +2,9 @@
     "name": "@seally/simple-lexer",
     "version": "0.1.0",
     "exports": "./mod.ts",
+    "publish": {
+        "exclude": ["docs/", "docs-extras/", ".editorconfig"]
+    },
     "fmt": {
         "exclude": [
             "docs/"
